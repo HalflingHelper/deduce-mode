@@ -9,26 +9,43 @@
 			"include": "#strings"
 		},
 		{
-			"include": "#storage"
+			"include": "#line-comment"
+		},
+		{
+			"include": "#block-comment"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#variables"
 		}
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control",
-				"match": "\\b(if|import|union|while|for|return)\\b"
+				"match": "\\b(if|import|union|switch|case|then|else)\\b"
+			},
+			{
+				"name": "keyword.control.proof",
+				"match": "\\b(suffices|rewrite|symmetric|apply|to|with|by|have|proof|end|arbitrary|conclude|all|suppose|induction|definition|enable|equations|transitive|in|cases|conjunct|of|choose|some)\\b"
 			},
 			{
 				"name":"keyword.operator.logical",
-				"match": "\\b(and|or)\\b"
+				"match": "\\b(and|or|not)\\b"
+			},
+			{
+				"name":"keyword.operator.other",
+				"match": "[\\-\\+*%=≠<>≤≥&∘∪∩⊆∈⨄]"
 			},
 			{
 				"name":"storage.type.function",
-				"match": "\\b(function|theorem|lemma)\\b"
+				"match": "\\b(function|theorem|lemma|λ|fun|operator|generic|define)\\b"
 			},
 			{
 				"name":"storage.type",
-				"match": "\\b(Nat|List|pool|Pos)\\b"
+				"match": "\\b(Nat|List|bool|Pos)\\b"
 			}]
 		},
 		"strings": {
@@ -39,6 +56,32 @@
 				{
 					"name": "constant.character.escape.deduce",
 					"match": "\\\\."
+				}
+			]
+		},
+		"line-comment": {
+			"name": "comment.line.double-slash",
+			"begin": "\\/\\/",
+			"end": "\n"
+		},
+		"block-comment": {
+			"name": "comment.block",
+			"begin": "\\/\\*",
+			"end": "\\*\\/"
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "\\b(\\d+)\\b"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable",
+					"match": "\\b(\\w)(\\w|\\d|[₀₁₂₃₄₅₆₇₈₉!?\\'])*\\b"
 				}
 			]
 		}
