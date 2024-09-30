@@ -1,0 +1,47 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Deduce",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#storage"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control",
+				"match": "\\b(if|import|union|while|for|return)\\b"
+			},
+			{
+				"name":"keyword.operator.logical",
+				"match": "\\b(and|or)\\b"
+			},
+			{
+				"name":"storage.type.function",
+				"match": "\\b(function|theorem|lemma)\\b"
+			},
+			{
+				"name":"storage.type",
+				"match": "\\b(Nat|List|pool|Pos)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.deduce",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.deduce",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.deduce"
+}

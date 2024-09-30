@@ -1,0 +1,25 @@
+{
+  "name": "deduce-mode",
+  "displayName": "deduce-mode",
+  "description": "Language Support for Deduce",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "deduce",
+      "aliases": ["Deduce", "deduce"],
+      "extensions": [".pf",".thm"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "deduce",
+      "scopeName": "source.deduce",
+      "path": "./syntaxes/deduce.tmLanguage.json"
+    }]
+  }
+}

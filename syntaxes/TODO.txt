@@ -1,0 +1,7 @@
+[] Operators
+[] Numbers
+[] Random identifies
+[] all
+[] rewrite, symmetric, apply, to, with, by, have
+
+[] Does it need to be more sophisticated in r.e. having contexts?
