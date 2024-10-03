@@ -1,13 +1,16 @@
-# deduce-mode README
+# deduce-mode
 
-deduce-mode exists to improve the experience of writing deduce in vs code. Inspired by agda-mode, though
+deduce-mode exists to  moderately improve the experience of writing [deduce](https://github.com/jsiek/deduce/) in VS Cde. Inspired by agda-mode, though
 much less fully featured.
 
 ## Features
 
 - Syntax Highlighting
+- File icons
 
 More to come!
+- Snippet completion
+- Semantic Highlighting
 
 <!-- ## Requirements -->
 
@@ -25,13 +28,14 @@ More to come!
 
 ## Known Issues
 
-- Still no support for unicode substitutions for many operators (i.e. `⊆` vs `(=`)
+- Still no highlighting support for unicode substitutions for many operators (i.e. `⊆` vs `(=`)
+
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 0.0.1
-
 Prerelease: Minimal syntax highlighting support.
+
+### 0.0.2
+Added file icons.
 
