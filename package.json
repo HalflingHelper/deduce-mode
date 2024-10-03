@@ -2,7 +2,7 @@
   "name": "deduce-mode",
   "displayName": "deduce-mode",
   "description": "Language Support for Deduce",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.93.0"
   },
@@ -13,11 +13,30 @@
     "languages": [{
       "id": "deduce",
       "aliases": ["Deduce", "deduce"],
-      "extensions": [".pf",".thm"],
-      "configuration": "./language-configuration.json"
+      "extensions": [".pf"],
+      "configuration": "./language-configuration.json",
+      "icon": {
+        "light": "./icons/logo_pf.svg",
+        "dark": "./icons/logo_pf.svg"
+      }
+    },
+    {
+      "id": "deduce_thm",
+      "aliases": ["Theorem", "theorem"],
+      "extensions": [".thm"],
+      "configuration": "./language-configuration.json",
+      "icon": {
+        "light": "./icons/logo_thm.svg",
+        "dark": "./icons/logo_thm.svg"
+      }
     }],
     "grammars": [{
       "language": "deduce",
+      "scopeName": "source.deduce",
+      "path": "./syntaxes/deduce.tmLanguage.json"
+    },
+    {
+      "language": "deduce_thm",
       "scopeName": "source.deduce",
       "path": "./syntaxes/deduce.tmLanguage.json"
     }]
