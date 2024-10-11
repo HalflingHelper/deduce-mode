@@ -1,0 +1,15 @@
+{
+    "Theorem": {
+        "prefix": ["theorem"],
+        "body": ["theorem ${1:name} : ${2:formula}\nproof \n\t$0?\nend"],
+        "description": "A new theorem"
+    },
+    "Suffices": {
+        "prefix": ["suffices"],
+        "body": ["suffices ? \n\tby ${1|definition,rewrite|}"]
+    },
+    "Have": {
+        "prefix": ["have"],
+        "body": ["have ${1:name} : ${2:formula}\n\tby $0?"]
+    }
+}

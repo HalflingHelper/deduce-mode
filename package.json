@@ -11,38 +11,58 @@
     "vscode": "^1.93.0"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages", "Snippets"
   ],
   "contributes": {
-    "languages": [{
-      "id": "deduce",
-      "aliases": ["Deduce", "deduce"],
-      "extensions": [".pf"],
-      "configuration": "./language-configuration.json",
-      "icon": {
-        "light": "./icons/logo_pf.svg",
-        "dark": "./icons/logo_pf.svg"
+    "languages": [
+      {
+        "id": "deduce",
+        "aliases": [
+          "Deduce",
+          "deduce"
+        ],
+        "extensions": [
+          ".pf"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icons/logo_pf.svg",
+          "dark": "./icons/logo_pf.svg"
+        }
+      },
+      {
+        "id": "deduce_thm",
+        "aliases": [
+          "Theorem",
+          "theorem"
+        ],
+        "extensions": [
+          ".thm"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icons/logo_thm.svg",
+          "dark": "./icons/logo_thm.svg"
+        }
       }
-    },
-    {
-      "id": "deduce_thm",
-      "aliases": ["Theorem", "theorem"],
-      "extensions": [".thm"],
-      "configuration": "./language-configuration.json",
-      "icon": {
-        "light": "./icons/logo_thm.svg",
-        "dark": "./icons/logo_thm.svg"
+    ],
+    "grammars": [
+      {
+        "language": "deduce",
+        "scopeName": "source.deduce",
+        "path": "./syntaxes/deduce.tmLanguage.json"
+      },
+      {
+        "language": "deduce_thm",
+        "scopeName": "source.deduce",
+        "path": "./syntaxes/deduce.tmLanguage.json"
       }
-    }],
-    "grammars": [{
-      "language": "deduce",
-      "scopeName": "source.deduce",
-      "path": "./syntaxes/deduce.tmLanguage.json"
-    },
-    {
-      "language": "deduce_thm",
-      "scopeName": "source.deduce",
-      "path": "./syntaxes/deduce.tmLanguage.json"
-    }]
+    ],
+    "snippets": [
+      {
+        "language": "deduce",
+        "path": "./snippets.json"
+      }
+    ]
   }
 }
