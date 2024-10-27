@@ -27,7 +27,8 @@
     ["<", ">"]
   ],
   "indentationRules": {
-    "increaseIndentPattern": "^proof|(suffices((?!by).)*)$",
-    "decreaseIndentPattern": "^((?!.*?\\/\\*).*\\*/)?\\s*[\\)\\}\\]].*$"
+    "increaseIndentPattern": "^((?!\\/\\/).)*(proof.*|\\{[^}]*|\\([^)]*)$",
+    "decreaseIndentPattern": "^((?!.*?\\/\\*).*\\*\\/)?\\s*(\\)|\\}|end).*$",
+    "indentNextLinePattern": "^((?!\\/\\/).)*((suffices|have|conclude)((?!(by)).)*)$"
   }
 }
