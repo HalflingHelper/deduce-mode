@@ -7,10 +7,19 @@ much less fully featured.
 
 - Syntax Highlighting
 - File icons
+- Line Indentation
+- Autorun
 
 More to come!
-- Snippet completion
 - Semantic Highlighting
+
+## Installation
+Since this is still very much a work in progress, the extension is not of the vscode marketplace.
+
+To get the extension, download the latest `.vsix` file from [releases](https://github.com/HalflingHelper/deduce-mode/releases) 
+and put it somewhere you'll remember. You can then add it as an extension in vscode.
+![image](https://github.com/user-attachments/assets/7c840dbd-d781-4e3d-aa91-6606d4ff8bff)
+
 
 <!-- ## Requirements -->
 
