@@ -6,13 +6,15 @@
     "type": "git",
     "url": "https://github.com/HalflingHelper/deduce-mode.git"
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.93.0"
   },
   "categories": [
     "Programming Languages", "Snippets"
   ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
   "contributes": {
     "languages": [
       {
@@ -63,6 +65,46 @@
         "language": "deduce",
         "path": "./snippets.json"
       }
-    ]
+    ],
+    "commands": [
+      {
+        "command": "deduceMode.runFile",
+        "title": "Proofcheck File",
+        "icon": {
+            "light": "./icons/logo_pf.svg",
+            "dark": "./icons/logo_pf.svg"
+         }
+      }
+    ],
+    "menus": {
+      "editor/title/run": [
+         {
+            "when": "resourceExtname == .pf",
+            "command": "deduceMode.runFile",
+            "group": "navigation"
+         }
+      ]
+   },
+   "configuration": {
+    "title": "Deduce Mode",
+    "properties": {
+      "deduce-mode.pythonInstallPath": {
+        "type": "string",
+        "description": "Location of the Python executable to run deduce with. Must be at least Python 3.10"
+      },
+      "deduce-mode.deduceInstallPath": {
+        "type": "string",
+        "description": "Location of the directory containing `deduce.py`"
+      }
+    }
+   },
+   "scripts": {},
+	 "devDependencies": {
+		"@eslint/js": "^9.13.0",
+		"@stylistic/eslint-plugin": "^2.9.0",
+		"@types/vscode": "^1.73.0",
+		"eslint": "^9.13.0",
+		"typescript-eslint": "^8.11.0"
+	 }
   }
 }

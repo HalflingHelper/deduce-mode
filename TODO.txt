@@ -1,6 +1,6 @@
 [x] Operators
     [] Non-unicode versions
-[] Comments
 
-[] Does it need to be more sophisticated in r.e. having contexts?
-  - https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide
+[] Smoother experience setting up the run command
+
+[] Language Server

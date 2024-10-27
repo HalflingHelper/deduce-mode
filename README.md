@@ -39,3 +39,6 @@ Prerelease: Minimal syntax highlighting support.
 ### 0.0.2
 Added file icons.
 
+### 0.0.3
+Added support for basic line indentation and a run command.
+
