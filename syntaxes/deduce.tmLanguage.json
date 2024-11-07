@@ -19,34 +19,39 @@
 		},
 		{
 			"include": "#variables"
+		},
+		{
+			"include": "#punctuations"
 		}
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control",
-				"match": "\\b(if|import|union|switch|case|then|else)\\b"
-			},
-			{
-				"name": "keyword.control.proof",
-				"match": "\\b(suffices|rewrite|symmetric|apply|to|with|by|have|proof|end|arbitrary|conclude|all|suppose|induction|definition|enable|equations|transitive|in|cases|conjunct|of|choose|some)\\b"
-			},
-			{
-				"name":"keyword.operator.logical",
-				"match": "\\b(and|or|not)\\b"
-			},
-			{
-				"name":"keyword.operator.other",
-				"match": "[\\-\\+*%=≠<>≤≥&∘∪∩⊆∈⨄]"
-			},
-			{
-				"name":"storage.type.function",
-				"match": "\\b(function|theorem|lemma|λ|fun|operator|generic|define)\\b"
-			},
-			{
-				"name":"storage.type",
-				"match": "\\b(Nat|List|bool|Pos)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.control",
+					"match": "\\b(if|import|union|switch|case|then|else)\\b"
+				},
+				{
+					"name": "keyword.control.proof",
+					"match": "\\b(suffices|rewrite|symmetric|apply|to|with|by|have|proof|end|arbitrary|conclude|all|suppose|induction|definition|enable|equations|transitive|in|cases|conjunct|of|choose|some)\\b"
+				},
+				{
+					"name": "keyword.operator.logical",
+					"match": "\\b(and|or|not)\\b"
+				},
+				{
+					"name": "keyword.operator.other",
+					"match": "(\\/=)|(<=>)|(<=)|(>=)|(\\(=)|(\\bin\\b)|(\\|)|(&)|(\\.\\+\\.)|(\\.o\\.)|(\\.0\\.)|(\\->)|[\\-\\+*%=≠<>≤≥&⇔∘∪∩⊆∈⨄]"
+				},
+				{
+					"name": "storage.type.function",
+					"match": "\\b(function|theorem|lemma|λ|fun|operator|generic|define)\\b"
+				},
+				{
+					"name": "storage.type",
+					"match": "\\b(Nat|List|bool|Pos)\\b"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.deduce",
@@ -81,7 +86,15 @@
 			"patterns": [
 				{
 					"name": "variable",
-					"match": "\\b(\\w)(\\w|\\d|[₀₁₂₃₄₅₆₇₈₉!?\\'])*\\b"
+					"match": "\\b\\w[\\w\\d₀₁₂₃₄₅₆₇₈₉!?\\']*(?=[^\\w\\d₀₁₂₃₄₅₆₇₈₉!?\\'])"
+				}
+			]
+		},
+		"punctuations": {
+			"patterns": [
+				{
+					"name": "punctuation",
+					"match": "[\\[\\]\\(\\)\\,\\:\\{\\}#]"
 				}
 			]
 		}

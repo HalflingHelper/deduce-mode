@@ -2,6 +2,9 @@
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
 
+/* Constants */
+const TERMINAL_NAME = "Deduce";
+
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 
@@ -18,6 +21,7 @@ function activate(context) {
       const python = config.get("pythonInstallPath")
       const deduce = config.get("deduceInstallPath")
 
+      editor.document.save()
       // TODO: Show both errors at once if possible
       // Or prompt user to find them or detect files
       if (!python) {
@@ -31,9 +35,9 @@ function activate(context) {
 
       const terminalCommand = `${python} ${deduce}/deduce.py ${filePath} --dir ${deduce}/lib`
 
-      let terminal = vscode.window.terminals.find(t => t.name === "Run File Terminal");
+      let terminal = vscode.window.terminals.find(t => t.name === TERMINAL_NAME);
       if (!terminal) {
-        terminal = vscode.window.createTerminal("Run File Terminal");
+        terminal = vscode.window.createTerminal(TERMINAL_NAME);
       }
 
       // Show the terminal and execute the command

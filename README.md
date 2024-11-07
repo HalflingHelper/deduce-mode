@@ -36,9 +36,7 @@ and put it somewhere you'll remember. You can then add it as an extension in vsc
 <!-- * `myExtension.thing`: Set to `blah` to do something. -->
 
 ## Known Issues
-
-- Still no highlighting support for unicode substitutions for many operators (i.e. `⊆` vs `(=`)
-
+- Nothing right now!
 
 ## Release Notes
 
@@ -50,4 +48,7 @@ Added file icons.
 
 ### 0.0.3
 Added support for basic line indentation and a run command.
+
+### 0.0.4
+Improved run command and expanded token scopes for variable names and non-unicode operators.
 
