@@ -2,11 +2,13 @@
   "name": "deduce-mode",
   "displayName": "deduce-mode",
   "description": "Language Support for Deduce",
+  "publisher": "CalvinJosenhans",
+  "icon": "./icons/icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/HalflingHelper/deduce-mode.git"
   },
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.93.0"
   },
