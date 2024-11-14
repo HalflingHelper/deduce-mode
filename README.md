@@ -14,8 +14,9 @@ More to come!
 - Semantic Highlighting
 
 ## Installation
-Since this is still very much a work in progress, the extension is not of the vscode marketplace.
+We are now on the marketplace! [link](https://marketplace.visualstudio.com/manage/publishers/calvinjosenhans/extensions/deduce-mode/hub?_a=acquisition)
 
+### From File
 To get the extension, download the latest `.vsix` file from [releases](https://github.com/HalflingHelper/deduce-mode/releases) 
 and put it somewhere you'll remember. You can then add it as an extension in vscode.
 ![image](https://github.com/user-attachments/assets/7c840dbd-d781-4e3d-aa91-6606d4ff8bff)
