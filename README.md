@@ -1,7 +1,6 @@
 # deduce-mode
 
-deduce-mode exists to  moderately improve the experience of writing [deduce](https://github.com/jsiek/deduce/) in VS Cde. Inspired by agda-mode, though
-much less fully featured.
+deduce-mode exists to  moderately improve the experience of writing [Deduce](https://github.com/jsiek/deduce/) in VS Code.
 
 ## Features
 
@@ -9,9 +8,11 @@ much less fully featured.
 - File icons
 - Line Indentation
 - Autorun
+- Snippets
 
 More to come!
 - Semantic Highlighting
+- Configuration for the `--dir` option
 
 ## Installation
 We are now on the marketplace! [link](https://marketplace.visualstudio.com/manage/publishers/calvinjosenhans/extensions/deduce-mode/hub?_a=acquisition)
@@ -22,19 +23,14 @@ and put it somewhere you'll remember. You can then add it as an extension in vsc
 ![image](https://github.com/user-attachments/assets/7c840dbd-d781-4e3d-aa91-6606d4ff8bff)
 
 
-<!-- ## Requirements -->
+## Requirements
+Preferably you will have installed Deduce and Python 3.10+, otherwise the extension is not of much use to you. 😃
 
 
-<!-- ## Extension Settings -->
-
-<!-- Include if your extension adds any VS Code settings through the `contributes.configuration` extension point. -->
-<!--  -->
-<!-- For example: -->
-<!--  -->
-<!-- This extension contributes the following settings: -->
-<!--  -->
-<!-- * `myExtension.enable`: Enable/disable this extension. -->
-<!-- * `myExtension.thing`: Set to `blah` to do something. -->
+## Extension Settings
+This extension contributes the following settings:
+- `deduce-mode.pythonInstallPath`: The location of the Python executable you want to run Deduce with. Default `python`.
+- `deduce-mode.deduceInstallPath`: The location of your `deduce.py` file.
 
 ## Known Issues
 - Nothing right now!
@@ -52,4 +48,10 @@ Added support for basic line indentation and a run command.
 
 ### 0.0.4
 Improved run command and expanded token scopes for variable names and non-unicode operators.
+
+### 0.0.5
+Touchups for release on the extension marketplace.
+
+### 0.1.0
+Somewhat usable software: Improved settings and errors, and expanded readme.
 

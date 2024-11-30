@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/HalflingHelper/deduce-mode.git"
   },
-  "version": "0.0.5",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.93.0"
   },
@@ -91,13 +91,13 @@
     "title": "Deduce Mode",
     "properties": {
       "deduce-mode.pythonInstallPath": {
-        "default": "python3",
+        "default": "python",
         "type": "string",
         "description": "Location of the Python executable to run deduce with. Must be at least Python 3.10"
       },
       "deduce-mode.deduceInstallPath": {
         "type": "string",
-        "description": "Location of the directory containing `deduce.py`"
+        "markdownDescription": "Location of the directory containing `deduce.py`"
       }
     }
    },

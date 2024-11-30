@@ -22,16 +22,25 @@ function activate(context) {
       const deduce = config.get("deduceInstallPath")
 
       editor.document.save()
-      // TODO: Show both errors at once if possible
-      // Or prompt user to find them or detect files
+
       if (!python) {
-        vscode.window.showErrorMessage("`deduce-mode.pythonInstallPath` not set");
-        return;
+        vscode.window.showErrorMessage("`deduce-mode.pythonInstallPath` not set", "Open Settings")
+        .then(selection => {
+          if (selection == "Open Settings") {
+            vscode.commands.executeCommand( 'workbench.action.openSettings', 'deduce-mode.pythonInstallPath' );
+          }
+        });
       }
       if (!deduce) {
-        vscode.window.showErrorMessage("`deduce-mode.deduceInstallPath` not set");
-        return;
+        vscode.window.showErrorMessage("`deduce-mode.deduceInstallPath` not set", "Open Settings")
+        .then(selection => {
+          if (selection == "Open Settings") {
+            vscode.commands.executeCommand( 'workbench.action.openSettings', 'deduce-mode.deduceInstallPath' );
+          }
+        });
       }
+
+      if (!python || !deduce) { return; }
 
       const terminalCommand = `${python} ${deduce}/deduce.py ${filePath} --dir ${deduce}/lib`
 
