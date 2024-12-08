@@ -11,8 +11,9 @@ deduce-mode exists to  moderately improve the experience of writing [Deduce](htt
 - Snippets
 
 More to come!
+- Configuration for deduce command line flags
 - Semantic Highlighting
-- Configuration for the `--dir` option
+- Auto-formatter
 
 ## Installation
 We are now on the marketplace! [link](https://marketplace.visualstudio.com/manage/publishers/calvinjosenhans/extensions/deduce-mode/hub?_a=acquisition)
@@ -26,6 +27,9 @@ and put it somewhere you'll remember. You can then add it as an extension in vsc
 ## Requirements
 Preferably you will have installed Deduce and Python 3.10+, otherwise the extension is not of much use to you. 😃
 
+If the `ms-python.python` extension is installed, and you have not set a Python path to use for deduce, then the extension
+will attempt to use a Python environment provided by that extension.
+
 
 ## Extension Settings
 This extension contributes the following settings:
@@ -37,21 +41,23 @@ This extension contributes the following settings:
 
 ## Release Notes
 
-### 0.0.1
-Prerelease: Minimal syntax highlighting support.
-
-### 0.0.2
-Added file icons.
-
-### 0.0.3
-Added support for basic line indentation and a run command.
-
-### 0.0.4
-Improved run command and expanded token scopes for variable names and non-unicode operators.
-
-### 0.0.5
-Touchups for release on the extension marketplace.
+### 0.1.1
+Updated tokenization and 
 
 ### 0.1.0
 Somewhat usable software: Improved settings and errors, and expanded readme.
 
+### 0.0.5
+Touchups for release on the extension marketplace.
+
+### 0.0.4
+Improved run command and expanded token scopes for variable names and non-unicode operators.
+
+### 0.0.3
+Added support for basic line indentation and a run command.
+
+### 0.0.2
+Added file icons.
+
+### 0.0.1
+Prerelease: Minimal syntax highlighting support.

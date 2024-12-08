@@ -18,26 +18,18 @@ function activate(context) {
     if (editor) {
       const filePath = editor.document.uri.fsPath;
       const config = vscode.workspace.getConfiguration("deduce-mode")
-      const python = config.get("pythonInstallPath")
+      const python = await getPythonInterpreterPath(config);
       const deduce = config.get("deduceInstallPath")
 
       editor.document.save()
 
-      if (!python) {
-        vscode.window.showErrorMessage("`deduce-mode.pythonInstallPath` not set", "Open Settings")
-        .then(selection => {
-          if (selection == "Open Settings") {
-            vscode.commands.executeCommand( 'workbench.action.openSettings', 'deduce-mode.pythonInstallPath' );
-          }
-        });
-      }
       if (!deduce) {
         vscode.window.showErrorMessage("`deduce-mode.deduceInstallPath` not set", "Open Settings")
-        .then(selection => {
-          if (selection == "Open Settings") {
-            vscode.commands.executeCommand( 'workbench.action.openSettings', 'deduce-mode.deduceInstallPath' );
-          }
-        });
+          .then(selection => {
+            if (selection === "Open Settings") {
+              vscode.commands.executeCommand('workbench.action.openSettings', 'deduce-mode.deduceInstallPath');
+            }
+          });
       }
 
       if (!python || !deduce) { return; }
@@ -65,4 +57,32 @@ function deactivate() { }
 module.exports = {
   activate,
   deactivate
+}
+
+
+async function getPythonInterpreterPath(config) {
+  // Default to using the deduce setting
+  const deducePython = config.get("pythonInstallPath")
+
+  if (deducePython) return deducePython;
+
+
+  const pythonExtension = vscode.extensions.getExtension('ms-python.python');
+  if (pythonExtension) {
+    await pythonExtension.activate();
+    const pythonApi = pythonExtension.exports;
+    const interpreterPath = pythonApi.environments?.getActiveEnvironmentPath?.()?.path;
+    return interpreterPath;
+  }
+
+  vscode.window.showErrorMessage("`deduce-mode.pythonInstallPath` not set", "Install ms-python Extension", "Open Settings")
+    .then(selection => {
+      if (selection === "Open Settings") {
+        vscode.commands.executeCommand('workbench.action.openSettings', 'deduce-mode.pythonInstallPath');
+      } else if (selection === "Install ms-python Extension") {
+        vscode.commands.executeCommand('workbench.extensions.search', 'ms-python.python')
+      }
+    });
+
+  return undefined;
 }

@@ -29,11 +29,11 @@
 			"patterns": [
 				{
 					"name": "keyword.control",
-					"match": "\\b(if|import|union|switch|case|then|else)\\b"
+					"match": "\\b(if|import|union|switch|case|then|else|assert|print)\\b"
 				},
 				{
 					"name": "keyword.control.proof",
-					"match": "\\b(suffices|rewrite|symmetric|apply|to|with|by|have|proof|end|arbitrary|conclude|all|suppose|induction|definition|enable|equations|evaluate|transitive|in|cases|conjunct|of|choose|some)\\b"
+					"match": "\\b(all|apply|arbitrary|assume|by|cases|choose|conclude|conjunct|definition|enable|end|equations|evaluate|extensionality|for|from|have|in|induction|injective|obtain|of|proof|rewrite|some|sorry|suffices|suppose|symmetric|to|transitive|where|with)\\b"
 				},
 				{
 					"name": "keyword.operator.logical",
@@ -41,11 +41,11 @@
 				},
 				{
 					"name": "keyword.operator.other",
-					"match": "(\\/=)|(<=>)|(<=)|(>=)|(\\(=)|(\\bin\\b)|(\\|)|(&)|(\\.\\+\\.)|(\\.o\\.)|(\\.0\\.)|(\\->)|[\\-\\+*%=≠<>≤≥&⇔∘∪∩⊆∈⨄]"
+					"match": "(\\/=)|(<=>)|(<=)|(>=)|(\\(=)|(\\bin\\b)|(\\|)|(&)|(\\.\\+\\.)|(\\.o\\.)|(\\+\\+)|(\\.0\\.)|(\\->)|[\\-\\+*%=≠<>≤≥&⇔∘∪∩⊆∈⨄]"
 				},
 				{
 					"name": "storage.type.function",
-					"match": "\\b(function|theorem|lemma|λ|fun|operator|generic|define)\\b"
+					"match": "\\b(function|theorem|lemma|fun|operator|generic|define)\\b|\\bλ"
 				},
 				{
 					"name": "storage.type",
@@ -86,7 +86,7 @@
 			"patterns": [
 				{
 					"name": "variable",
-					"match": "\\b\\w[\\w\\d₀₁₂₃₄₅₆₇₈₉!?\\']*(?=[^\\w\\d₀₁₂₃₄₅₆₇₈₉!?\\'])"
+					"match": "\\w[\\w\\d₀₁₂₃₄₅₆₇₈₉!?\\']*(?=[^\\w\\d₀₁₂₃₄₅₆₇₈₉!?\\'])"
 				}
 			]
 		},
@@ -94,7 +94,7 @@
 			"patterns": [
 				{
 					"name": "punctuation",
-					"match": "[\\[\\]\\(\\)\\,\\:\\{\\}#]"
+					"match": "[\\[\\]\\(\\)\\,\\:\\{\\}#\\?@]|\\.\\.\\."
 				}
 			]
 		}

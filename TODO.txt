@@ -1,10 +1,12 @@
-[] Syntax highlighting scope for 
-    [] `...` (punctuation?)
+[] Run options for command line flags, configuration for --dir
+
+[] Auto format - https://code.visualstudio.com/blogs/2016/11/15/formatters-best-practices 
 
 [] Actual themimg for deduce specifically, rather than relying on existing theme to work
     - Can we query current theme to get good colors?
 
 [] More Snippets
+    - Popular inductions
 
 [] Read output from run command, to parse and underline any errors.
     [] Suggestions to fill question marks?
