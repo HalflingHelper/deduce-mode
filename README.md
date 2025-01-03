@@ -35,14 +35,21 @@ will attempt to use a Python environment provided by that extension.
 This extension contributes the following settings:
 - `deduce-mode.pythonInstallPath`: The location of the Python executable you want to run Deduce with. Default `python`.
 - `deduce-mode.deduceInstallPath`: The location of your `deduce.py` file.
+- `deduce-mode.libraryPaths`: An array of folders to use with deduce's `--dir` option. Defaults to deduce's `lib` folder.
 
 ## Known Issues
 - Nothing right now!
 
 ## Release Notes
 
+### 0.1.2
+Deduce mode now looks for `deduce.py` in the active workspace. 
+Support for multiple and custom library directories.
+Added snippets for common induction and case patterns.
+Tokenization patches.
+
 ### 0.1.1
-Updated tokenization and 
+Updated tokenization. 
 
 ### 0.1.0
 Somewhat usable software: Improved settings and errors, and expanded readme.

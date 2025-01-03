@@ -98,6 +98,10 @@
       "deduce-mode.deduceInstallPath": {
         "type": "string",
         "markdownDescription": "Location of the directory containing `deduce.py`"
+      },
+      "deduce-mode.libraryPaths": {
+        "type": "array",
+        "markdownDescription": "Folders to be used with the `--dir` option. When left blank, the extension defaults to `{deduceInstallPath}/lib`."
       }
     }
    },

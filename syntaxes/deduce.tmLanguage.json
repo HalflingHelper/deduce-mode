@@ -79,6 +79,10 @@
 				{
 					"name": "constant.numeric",
 					"match": "\\b(\\d+)\\b"
+				},
+				{
+					"name": "constant.other",
+					"match": "∅"
 				}
 			]
 		},
@@ -94,7 +98,7 @@
 			"patterns": [
 				{
 					"name": "punctuation",
-					"match": "[\\[\\]\\(\\)\\,\\:\\{\\}#\\?@]|\\.\\.\\."
+					"match": "[\\[\\]\\(\\)\\,\\:\\{\\}#\\?@]|\\.\\.\\.|\\$"
 				}
 			]
 		}

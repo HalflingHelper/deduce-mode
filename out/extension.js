@@ -19,7 +19,7 @@ function activate(context) {
       const filePath = editor.document.uri.fsPath;
       const config = vscode.workspace.getConfiguration("deduce-mode")
       const python = await getPythonInterpreterPath(config);
-      const deduce = config.get("deduceInstallPath")
+      const deduce = await getDeduceInstallPath(config);
 
       editor.document.save()
 
@@ -34,7 +34,12 @@ function activate(context) {
 
       if (!python || !deduce) { return; }
 
-      const terminalCommand = `${python} ${deduce}/deduce.py ${filePath} --dir ${deduce}/lib`
+      // Get the directory path
+      let libPaths = config.get("libraryPaths");
+
+      if (!libPaths) { libPaths = [`${deduce}/lib`] }
+
+      const terminalCommand = `${python} ${deduce}/deduce.py ${filePath} ${libPaths.map(p => `--dir ${p}`).join(" ")}`
 
       let terminal = vscode.window.terminals.find(t => t.name === TERMINAL_NAME);
       if (!terminal) {
@@ -62,7 +67,7 @@ module.exports = {
 
 async function getPythonInterpreterPath(config) {
   // Default to using the deduce setting
-  const deducePython = config.get("pythonInstallPath")
+  const deducePython = config.get("pythonInstallPath");
 
   if (deducePython) return deducePython;
 
@@ -84,5 +89,26 @@ async function getPythonInterpreterPath(config) {
       }
     });
 
+  return undefined;
+}
+
+async function getDeduceInstallPath(config) {
+  // Default to the deduce setting
+  const deduce = config.get("deduceInstallPath");
+  if (deduce) return deduce;
+
+  const workspaceDeduce = await findDeduceInWorkspace();
+  if (workspaceDeduce) return workspaceDeduce;
+
+  return undefined;
+}
+
+async function findDeduceInWorkspace() {
+  const files = await vscode.workspace.findFiles('deduce.py', null, 1);
+  if (files.length > 0) {
+      console.log(files[0].path)
+      let p = files[0].path
+    return p.slice(0, p.length - 9);
+  }
   return undefined;
 }

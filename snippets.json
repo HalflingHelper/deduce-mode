@@ -11,5 +11,25 @@
     "Have": {
         "prefix": ["have"],
         "body": ["have ${1:name} : ${2:formula}\n\tby $0?"]
+    },
+    "InductNat": {
+        "prefix": ["induction Nat"],
+        "body": ["induction Nat\ncase 0 {\n\t$0?\n}\ncase suc(n') assume IH {\n\t?\n}"]
+    },
+    "InductList": {
+        "prefix": ["induction List"],
+        "body": ["induction List<${1:T}>\ncase [] {\n\t$0?\n}\ncase node(n', ns') assume IH {\n\t?\n}"]
+    },
+    "CaseNat": {
+        "prefix": ["case 0", "case zero"],
+        "body": ["case 0 {\n\t$0?\n}\ncase suc(n') assume IH {\n\t?\n}"]
+    },
+    "CaseList": {
+        "prefix": ["case [], case empty"],
+        "body": ["case [] {\n\t$0?\n}\ncase node(n', ns') {\n\t?\n}"]
+    },
+    "CaseBool": {
+        "prefix": ["case true"],
+        "body": ["case true assume prop_t {\n\t$0?\n}\ncase false assume prop_f {\n\t?\n}"]
     }
 }
