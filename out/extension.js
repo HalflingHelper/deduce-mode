@@ -106,8 +106,7 @@ async function getDeduceInstallPath(config) {
 async function findDeduceInWorkspace() {
   const files = await vscode.workspace.findFiles('deduce.py', null, 1);
   if (files.length > 0) {
-      console.log(files[0].path)
-      let p = files[0].path
+      let p = files[0].fsPath
     return p.slice(0, p.length - 9);
   }
   return undefined;
