@@ -42,6 +42,9 @@ This extension contributes the following settings:
 
 ## Release Notes
 
+### 0.1.3
+Made filepaths system independent when searching from `deduce.py`.
+
 ### 0.1.2
 Deduce mode now looks for `deduce.py` in the active workspace. 
 Support for multiple and custom library directories.
