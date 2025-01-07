@@ -37,7 +37,7 @@ function activate(context) {
       // Get the directory path
       let libPaths = config.get("libraryPaths");
 
-      if (!libPaths) { libPaths = [`${deduce}/lib`] }
+      if (!libPaths || libPaths.length === 0) { libPaths = [`${deduce}/lib`] }
 
       const terminalCommand = `${python} ${deduce}/deduce.py ${filePath} ${libPaths.map(p => `--dir ${p}`).join(" ")}`
 

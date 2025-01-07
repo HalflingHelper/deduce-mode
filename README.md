@@ -42,6 +42,9 @@ This extension contributes the following settings:
 
 ## Release Notes
 
+### 0.1.4
+Bugfix: Javascript oddness
+
 ### 0.1.3
 Made filepaths system independent when searching from `deduce.py`.
 
