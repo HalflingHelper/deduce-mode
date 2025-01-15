@@ -19,7 +19,7 @@ More to come!
 We are now on the marketplace! [link](https://marketplace.visualstudio.com/manage/publishers/calvinjosenhans/extensions/deduce-mode/hub?_a=acquisition)
 
 ### From File
-To get the extension, download the latest `.vsix` file from [releases](https://github.com/HalflingHelper/deduce-mode/releases) 
+- To get the extension, download the latest `.vsix` file from [releases](https://github.com/HalflingHelper/deduce-mode/releases) 
 and put it somewhere you'll remember. You can then add it as an extension in vscode.
 ![image](https://github.com/user-attachments/assets/7c840dbd-d781-4e3d-aa91-6606d4ff8bff)
 
@@ -42,35 +42,40 @@ This extension contributes the following settings:
 
 ## Release Notes
 
+### 0.1.5
+- Added highlighting for additional stdlib names
+- Removed default value of `python` for `deduce-mode.pythonInstallPath`
+- Added snippet for lemmas
+
 ### 0.1.4
-Bugfix: Javascript oddness
+- Bugfix: Javascript oddness
 
 ### 0.1.3
-Made filepaths system independent when searching from `deduce.py`.
+- Made filepaths system independent when searching from `deduce.py`.
 
 ### 0.1.2
-Deduce mode now looks for `deduce.py` in the active workspace. 
-Support for multiple and custom library directories.
-Added snippets for common induction and case patterns.
-Tokenization patches.
+- Deduce mode now looks for `deduce.py` in the active workspace. 
+- Support for multiple and custom library directories.
+- Added snippets for common induction and case patterns.
+- Tokenization patches.
 
 ### 0.1.1
-Updated tokenization. 
+- Updated tokenization. 
 
 ### 0.1.0
-Somewhat usable software: Improved settings and errors, and expanded readme.
+- Somewhat usable software: Improved settings and errors, and expanded readme.
 
 ### 0.0.5
-Touchups for release on the extension marketplace.
+- Touchups for release on the extension marketplace.
 
 ### 0.0.4
-Improved run command and expanded token scopes for variable names and non-unicode operators.
+- Improved run command and expanded token scopes for variable names and non-unicode operators.
 
 ### 0.0.3
-Added support for basic line indentation and a run command.
+- Added support for basic line indentation and a run command.
 
 ### 0.0.2
-Added file icons.
+- Added file icons.
 
 ### 0.0.1
-Prerelease: Minimal syntax highlighting support.
+- Prerelease: Minimal syntax highlighting support.

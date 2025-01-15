@@ -49,7 +49,7 @@
 				},
 				{
 					"name": "storage.type",
-					"match": "\\b(Nat|List|bool|Pos|type|Tree|Set)\\b"
+					"match": "\\b(Nat|List|bool|Pos|type|Tree|Set|Option|Pair|MultiSet|Int)\\b"
 				}
 			]
 		},

@@ -4,6 +4,11 @@
         "body": ["theorem ${1:name} : ${2:formula}\nproof \n\t$0?\nend"],
         "description": "A new theorem"
     },
+    "Lemma": {
+        "prefix": ["lemma"],
+        "body": ["lemma ${1:name} : ${2:formula}\nproof \n\t$0?\nend"],
+        "description": "A new lemma"
+    },
     "Suffices": {
         "prefix": ["suffices"],
         "body": ["suffices ? \n\tby ${1|definition,rewrite|}"]

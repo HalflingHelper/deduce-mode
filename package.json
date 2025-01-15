@@ -91,7 +91,6 @@
     "title": "Deduce Mode",
     "properties": {
       "deduce-mode.pythonInstallPath": {
-        "default": "python",
         "type": "string",
         "description": "Location of the Python executable to run deduce with. Must be at least Python 3.10"
       },
