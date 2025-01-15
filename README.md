@@ -19,6 +19,7 @@ More to come!
 We are now on the marketplace! [link](https://marketplace.visualstudio.com/manage/publishers/calvinjosenhans/extensions/deduce-mode/hub?_a=acquisition)
 
 ### From File
+> ℹ️ Releases are less frequently updated than the extension on the marketplace, so you might not always get the latest features.
 - To get the extension, download the latest `.vsix` file from [releases](https://github.com/HalflingHelper/deduce-mode/releases) 
 and put it somewhere you'll remember. You can then add it as an extension in vscode.
 ![image](https://github.com/user-attachments/assets/7c840dbd-d781-4e3d-aa91-6606d4ff8bff)
