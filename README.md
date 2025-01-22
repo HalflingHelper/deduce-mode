@@ -44,6 +44,9 @@ This extension contributes the following settings:
 
 ## Release Notes
 
+### 0.1.7
+- Modifying `assume` in cases snippets
+
 ### 0.1.6
 - Highlighting of `help` and `recall` keywords
 
