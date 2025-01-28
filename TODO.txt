@@ -1,4 +1,4 @@
-[] Run options for command line flags, configuration for --dir
+[] Run options for command line flags
 
 [] Auto format - https://code.visualstudio.com/blogs/2016/11/15/formatters-best-practices 
 
@@ -17,4 +17,4 @@
     - Python extension doesn't do this, no easy way?
 
 --STRETCH--
-[] Language Server
+[~] Language Server

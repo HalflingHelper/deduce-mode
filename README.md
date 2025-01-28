@@ -44,6 +44,10 @@ This extension contributes the following settings:
 
 ## Release Notes
 
+### 0.1.8
+- Bug fix in indentation with respect to `proof`
+- Adding directory of targeted file as a `--dir` argument
+
 ### 0.1.7
 - Modifying `assume` in cases snippets
 

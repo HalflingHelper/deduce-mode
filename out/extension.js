@@ -1,6 +1,7 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
+const path = require('path')
 
 /* Constants */
 const TERMINAL_NAME = "Deduce";
@@ -17,6 +18,7 @@ function activate(context) {
     const editor = vscode.window.activeTextEditor;
     if (editor) {
       const filePath = editor.document.uri.fsPath;
+      const containingDir =  path.dirname(filePath);
       const config = vscode.workspace.getConfiguration("deduce-mode")
       const python = await getPythonInterpreterPath(config);
       const deduce = await getDeduceInstallPath(config);
@@ -37,7 +39,10 @@ function activate(context) {
       // Get the directory path
       let libPaths = config.get("libraryPaths");
 
-      if (!libPaths || libPaths.length === 0) { libPaths = [`${deduce}/lib`] }
+      if (!libPaths || libPaths.length === 0) { libPaths = [`${deduce}/lib`]; }
+
+      // By default add the folder containing the current file
+      libPaths.push(containingDir);
 
       const terminalCommand = `${python} ${deduce}/deduce.py ${filePath} ${libPaths.map(p => `--dir ${p}`).join(" ")}`
 
