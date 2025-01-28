@@ -28,7 +28,7 @@
   ],
   // Word pattern, fix boundary issues
   "indentationRules": {
-    "increaseIndentPattern": "^((?!\\/\\/).)*(proof.*|\\{[^}]*|\\([^)]*)$",
+    "increaseIndentPattern": "^((?!\\/\\/).)*(proof( .*)?|\\{[^}]*|\\([^)]*)$",
     "decreaseIndentPattern": "^((?!.*?\\/\\*).*\\*\\/)?\\s*(\\)|\\}|end).*$",
     "indentNextLinePattern": "^((?!\\/\\/).)*((suffices|have|conclude)((?!(by)).)*)$"
   }
