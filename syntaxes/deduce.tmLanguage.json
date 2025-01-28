@@ -33,7 +33,7 @@
 				},
 				{
 					"name": "keyword.control.proof",
-					"match": "\\b(all|apply|arbitrary|assume|by|cases|choose|conclude|conjunct|definition|enable|end|equations|evaluate|extensionality|for|from|have|help|recall|in|induction|injective|obtain|of|proof|rewrite|some|sorry|suffices|suppose|symmetric|to|transitive|where|with)\\b"
+					"match": "\\b(all|apply|arbitrary|assume|by|cases|choose|conclude|conjunct|definition|enable|end|equations|evaluate|extensionality|for|from|have|help|in|induction|injective|obtain|of|proof|recall|reflexive|rewrite|some|sorry|suffices|suppose|symmetric|to|transitive|where|with)\\b"
 				},
 				{
 					"name": "keyword.operator.logical",
