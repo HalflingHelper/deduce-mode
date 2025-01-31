@@ -44,6 +44,14 @@ This extension contributes the following settings:
 
 ## Release Notes
 
+### 0.1.10
+- Fixing spaces in paths
+  - On Windows, add double quotes around the path
+  - On POSIX, prepend spaces with backslashes
+
+### 0.1.9
+- Using path to work with paths
+
 ### 0.1.8
 - Bug fix in indentation with respect to `proof`
 - Adding directory of targeted file as a `--dir` argument

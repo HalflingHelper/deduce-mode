@@ -39,12 +39,16 @@ function activate(context) {
       // Get the directory path
       let libPaths = config.get("libraryPaths");
 
-      if (!libPaths || libPaths.length === 0) { libPaths = [`${deduce}/lib`]; }
+      if (!libPaths || libPaths.length === 0) { libPaths = [path.join(deduce, 'lib')]; }
 
       // By default add the folder containing the current file
       libPaths.push(containingDir);
 
-      const terminalCommand = `${python} ${deduce}/deduce.py ${filePath} ${libPaths.map(p => `--dir ${p}`).join(" ")}`
+      const interpPath = fixPathSpaces(path.join(deduce, 'deduce.py'));
+      const libPathStr = libPaths.map(p => `--dir ${fixPathSpaces(p)}`).join(" ")
+      const filePathStr = fixPathSpaces(filePath);
+
+      const terminalCommand = `${python} ${interpPath} ${filePathStr} ${libPathStr}`
 
       let terminal = vscode.window.terminals.find(t => t.name === TERMINAL_NAME);
       if (!terminal) {
@@ -69,6 +73,16 @@ module.exports = {
   deactivate
 }
 
+
+function fixPathSpaces(p) {
+  if (path.sep == "/") {
+    // POSIX
+    return p.replaceAll(" ", "\\ ")
+  } else {
+    // WINDOWS
+    return `"${p}"`
+  }
+}
 
 async function getPythonInterpreterPath(config) {
   // Default to using the deduce setting
@@ -110,9 +124,10 @@ async function getDeduceInstallPath(config) {
 
 async function findDeduceInWorkspace() {
   const files = await vscode.workspace.findFiles('deduce.py', null, 1);
+  
   if (files.length > 0) {
-      let p = files[0].fsPath
-    return p.slice(0, p.length - 9);
+    let p = files[0].fsPath
+    return path.dirname(p)
   }
   return undefined;
 }
