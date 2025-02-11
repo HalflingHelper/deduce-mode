@@ -33,7 +33,7 @@
 				},
 				{
 					"name": "keyword.control.proof",
-					"match": "\\b(all|apply|arbitrary|assume|by|cases|choose|conclude|conjunct|definition|enable|end|equations|evaluate|extensionality|for|from|have|help|in|induction|injective|obtain|of|proof|recall|reflexive|rewrite|some|sorry|suffices|suppose|symmetric|to|transitive|where|with)\\b"
+					"match": "\\b(all|apply|arbitrary|assume|by|cases|choose|conclude|conjunct|definition|enable|end|equations|evaluate|extensionality|for|from|have|help|in|induction|injective|obtain|of|proof|recall|reflexive|rewrite|some|sorry|suffices|suppose|symmetric|to|transitive|where|with|associative|stop|replace)\\b"
 				},
 				{
 					"name": "keyword.operator.logical",
@@ -45,7 +45,7 @@
 				},
 				{
 					"name": "storage.type.function",
-					"match": "\\b(function|theorem|lemma|fun|operator|generic|define)\\b|\\bλ"
+					"match": "\\b(function|theorem|lemma|fun|operator|generic|define|recursive)\\b|\\bλ"
 				},
 				{
 					"name": "storage.type",
