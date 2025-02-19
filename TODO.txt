@@ -11,7 +11,6 @@
     [] Suggestions to fill question marks?
     - https://code.visualstudio.com/docs/terminal/shell-integration
 
-
 --TABLED--
 [~] Run button shouldn't run two at a time.
     - Python extension doesn't do this, no easy way?

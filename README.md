@@ -38,11 +38,20 @@ This extension contributes the following settings:
 - `deduce-mode.pythonInstallPath`: The location of the Python executable you want to run Deduce with. Default `python`.
 - `deduce-mode.deduceInstallPath`: The location of your `deduce.py` file.
 - `deduce-mode.libraryPaths`: An array of folders to use with deduce's `--dir` option. Defaults to deduce's `lib` folder.
+- `deduce-mode.clearTerminal`: Whether you want deduce to clear old output before running the current file.
 
 ## Known Issues
 - Nothing right now!
 
 ## Release Notes
+
+### 0.1.12
+- Added import snippets for `Nat` and `List` to silence induction hints
+- Additional indentation rules for `lemma`, `theorem` and `define`
+- Added option for clearing terminal
+
+### 0.1.11
+- More keywords
 
 ### 0.1.10
 - Fixing spaces in paths

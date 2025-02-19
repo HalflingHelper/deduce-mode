@@ -57,6 +57,9 @@ function activate(context) {
 
       // Show the terminal and execute the command
       terminal.show();
+      if (config.get('clearTerminal')) {
+        vscode.commands.executeCommand('workbench.action.terminal.clear');
+      }
       terminal.sendText(terminalCommand);
     }
   });

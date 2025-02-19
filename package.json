@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/HalflingHelper/deduce-mode.git"
   },
-  "version": "0.1.10",
+  "version": "0.1.12",
   "engines": {
     "vscode": "^1.93.0"
   },
@@ -101,6 +101,11 @@
       "deduce-mode.libraryPaths": {
         "type": "array",
         "markdownDescription": "Folders to be used with the `--dir` option. When left blank, the extension defaults to `{deduceInstallPath}/lib`."
+      },
+      "deduce-mode.clearTerminal": {
+        "type": "boolean",
+        "default": true,
+        "markdownDescription": "When selected, clears the deduce terminal output before running the current file."
       }
     }
    },

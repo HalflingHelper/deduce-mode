@@ -28,8 +28,8 @@
   ],
   // Word pattern, fix boundary issues
   "indentationRules": {
-    "increaseIndentPattern": "^((?!\\/\\/).)*(proof( .*)?|\\{[^}]*|\\([^)]*)$",
-    "decreaseIndentPattern": "^((?!.*?\\/\\*).*\\*\\/)?\\s*(\\)|\\}|end).*$",
-    "indentNextLinePattern": "^((?!\\/\\/).)*((suffices|have|conclude)((?!(by)).)*)$"
+    "increaseIndentPattern": "^((?!\\/\\/).)*((proof|theorem|lemma)( .*)?|\\{[^}]*|\\([^)]*)$",
+    "decreaseIndentPattern": "^((?!.*?\\/\\*).*\\*\\/)?\\s*(\\)|\\}|end|proof).*$",
+    "indentNextLinePattern": "^((?!\\/\\/).)*(((suffices|have|conclude)((?!(by)).)*)|((define)((?!(\\=)).)*))$"
   }
 }

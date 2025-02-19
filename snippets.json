@@ -74,5 +74,13 @@
         "body": [
             "case true assume prop_t {\n\t$0?\n}\ncase false assume prop_f {\n\t?\n}"
         ]
+    },
+    "ImportNat": {
+        "prefix": ["import Nat"],
+        "body": ["import Nat\n"]
+    },
+    "ImportList": {
+        "prefix": ["import List"],
+        "body": ["import List\n"]
     }
 }
