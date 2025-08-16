@@ -45,6 +45,9 @@ This extension contributes the following settings:
 
 ## Release Notes
 
+### 0.1.13
+- Update keywords
+
 ### 0.1.12
 - Added import snippets for `Nat` and `List` to silence induction hints
 - Additional indentation rules for `lemma`, `theorem` and `define`

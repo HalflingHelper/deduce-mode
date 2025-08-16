@@ -29,11 +29,11 @@
 			"patterns": [
 				{
 					"name": "keyword.control",
-					"match": "\\b(if|import|union|switch|case|then|else|assert|print)\\b"
+					"match": "\\b(module|if|import|export|union|switch|case|then|else|assert|print)\\b"
 				},
 				{
 					"name": "keyword.control.proof",
-					"match": "\\b(all|apply|arbitrary|assume|by|cases|choose|conclude|conjunct|definition|enable|end|equations|evaluate|extensionality|for|from|have|help|in|induction|injective|obtain|of|proof|recall|reflexive|rewrite|some|sorry|suffices|suppose|symmetric|to|transitive|where|with|associative|stop|replace)\\b"
+					"match": "\\b(all|apply|arbitrary|assume|by|cases|choose|conclude|conjunct|contradict|expand|enable|end|equations|evaluate|extensionality|for|from|have|help|in|induction|injective|obtain|of|proof|recall|reflexive|some|sorry|suffices|suppose|symmetric|to|transitive|where|with|stop|replace)\\b"
 				},
 				{
 					"name": "keyword.operator.logical",
@@ -45,11 +45,15 @@
 				},
 				{
 					"name": "storage.type.function",
-					"match": "\\b(function|theorem|lemma|fun|operator|generic|define|recursive)\\b|\\bλ"
+					"match": "\\b(terminates|theorem|lemma|fun|operator|generic|define|recursive|recfun)\\b|\\bλ"
 				},
 				{
 					"name": "storage.type",
-					"match": "\\b(Nat|List|bool|Pos|type|Tree|Set|Option|Pair|MultiSet|Int)\\b"
+					"match": "\\b(Nat|List|bool|Pos|type|Tree|Set|Option|Pair|MultiSet|Int|UInt)\\b"
+				},
+				{
+					"name": "storage.modifier",
+					"match": "\\b(public|private|opaque|associative|measure|auto)\\b"
 				}
 			]
 		},
