@@ -1,6 +1,7 @@
 [] Run options for command line flags
 
 [] Auto format - https://code.visualstudio.com/blogs/2016/11/15/formatters-best-practices 
+    - Part of lang-server
 
 [] Actual themimg for deduce specifically, rather than relying on existing theme to work
     - Can we query current theme to get good colors?
@@ -9,7 +10,8 @@
 
 [] Read output from run command, to parse and underline any errors.
     [] Suggestions to fill question marks?
-    - https://code.visualstudio.com/docs/terminal/shell-integration
+    - https://code.visualstudio.com/docs/terminal/shell-integration (bad and hard)
+    - https://stackoverflow.com/questions/71894392/alternative-of-vscode-window-ondidwriteterminaldata
 
 --TABLED--
 [~] Run button shouldn't run two at a time.

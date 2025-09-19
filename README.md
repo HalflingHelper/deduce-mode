@@ -45,6 +45,9 @@ This extension contributes the following settings:
 
 ## Release Notes
 
+### 0.1.15
+- Yet more keywords
+
 ### 0.1.14
 - Remove secret
 

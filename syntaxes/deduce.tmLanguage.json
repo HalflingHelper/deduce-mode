@@ -33,7 +33,7 @@
 				},
 				{
 					"name": "keyword.control.proof",
-					"match": "\\b(all|apply|arbitrary|assume|by|cases|choose|conclude|conjunct|contradict|expand|enable|end|equations|evaluate|extensionality|for|from|have|help|in|induction|injective|obtain|of|proof|recall|reflexive|some|sorry|suffices|suppose|symmetric|to|transitive|where|with|stop|replace)\\b"
+					"match": "\\b(all|apply|arbitrary|assume|by|cases|choose|conclude|conjunct|contradict|expand|enable|end|equations|evaluate|extensionality|for|from|have|help|in|induction|injective|obtain|of|proof|recall|reflexive|show|some|sorry|suffices|suppose|symmetric|to|transitive|where|with|stop|replace)\\b"
 				},
 				{
 					"name": "keyword.operator.logical",
@@ -41,11 +41,11 @@
 				},
 				{
 					"name": "keyword.operator.other",
-					"match": "(\\/=)|(<=>)|(<=)|(>=)|(\\(=)|(\\bin\\b)|(\\|)|(&)|(\\.\\+\\.)|(\\.o\\.)|(\\+\\+)|(\\.0\\.)|(\\->)|[\\-\\+*%=≠<>≤≥&⇔∘∪∩⊆∈⨄]"
+					"match": "(\\/=)|(<=>)|(<=)|(>=)|(\\(=)|(\\bin\\b)|(\\|)|(&)|(\\.\\+\\.)|(\\.o\\.)|(\\+\\+)|(\\.0\\.)|(\\->)|[\\-\\+*%=≠<>≤≥&⇔∘∪∩⊆∈⨄∸]"
 				},
 				{
 					"name": "storage.type.function",
-					"match": "\\b(terminates|theorem|lemma|fun|operator|generic|define|recursive|recfun)\\b|\\bλ"
+					"match": "\\b(terminates|theorem|lemma|fun|operator|generic|define|postulate|recursive|recfun)\\b|\\bλ"
 				},
 				{
 					"name": "storage.type",
